@@ -1,0 +1,96 @@
+@import '../../../styles/variables';
+
+main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  section{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-section{
+    gap: 1rem;
+
+    flex-grow: 1;
+
+   background-color: $gray-background;
+  }
+
+  .form-section{
+    flex-grow: 0.3;
+    padding: 0 35px;
+
+    img{
+      margin-bottom: 2rem;
+    }
+
+    h2{
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 3rem;
+    }
+
+    .btn-wrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 1.5rem;
+
+      .divider{
+        font-size: 14px;
+        color: $gray-background;
+        font-weight: 400;
+        width: 100%;
+
+        span{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          text-transform: uppercase;
+
+          &::after,
+          &::before{
+            content: '';
+            display: flex;
+            flex-grow: 1;
+            height: 2px;
+            background-color: $gray-background;
+        
+          }
+        }
+      }
+
+      button{
+        width: 100%;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 500;
+        border: none;
+        background-color: transparent;
+        padding: 12px 24px;
+        cursor: pointer;
+
+        &.btn-primary{
+          background-color: $primary-color;
+          color: white;
+          box-shadow:0px 8px 12px rgba(148.23004603385925, 64.33935597538948, 255, 0.20000000298023224);
+        }
+  
+        &.btn-secondary{
+          border: 1px solid $primary-color;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
